@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo-List App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <script
+      src="https://kit.fontawesome.com/7ec0ac3499.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="styles.css" title="text/css" />
+  </head>
+  <body>
+    <h1>Todo List</h1>
+    <div id="container">
+      <input
+        placeholder="Add Task"
+        class="add-task"
+        id="add"
+        data-helloWord="asdfgasd"
+      />
+      <span id="total-tasks">
+        Total tasks:
+        <span id="tasks-counter"> 0 </span>
+      </span>
+      <ul id="list">
+        <!-- <li>
+          <input type="checkbox" id="${task.id}" ${task.done ?
+          'checked':''}class="custom-checkbox">
+          <label for="${task.id}">${task.text}</label>
+          <img src="" class="fa-solid fa-trash" data-id="${task.id}" />
+        </li> -->
+           <!-- <li>
+          <input type="checkbox" id="task1" data-id="12" class="custom-checkbox">
+          <label for="task1">Buy groceries</label>
+          <img src="bin.svg" class="delete" data-id="12" />
+        </li> -->
+      </ul>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+    <!-- here we can see that the  use of modularizing our code:
+    => for example if any other developer try to work on the same project:
+  => and if it will create any  varibale and function which is same as my code:then this will do the (re-write) on my code:instead of creating and compling the (new-js) file of other developers: -->
+    <!-- <script type="text/javascript">
+      var a = 25;
+    </script> -->
+    <script src="todoModule.js"></script>
+    <script type="text/javascript">
+      console.log(TodoListApp);
+      // here we are using the (initialize) function of (todoModule-js) file:into the another js-file: 
+      TodoListApp.initialize();
+    </script>
+  </body>
+</html>
